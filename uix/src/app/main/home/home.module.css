@@ -1,0 +1,53 @@
+.animate-scroll-down {
+    animation: spin_4991 5s linear infinite;
+}
+
+@keyframes spin_4991 {
+    15% {
+        transform: translateY(-110%);
+    }
+
+    25% {
+        transform: translateY(-120%);
+    }
+
+    30% {
+        transform: translateY(-210%);
+    }
+
+    40% {
+        transform: translateY(-220%);
+    }
+
+    45% {
+        transform: translateY(-310%);
+    }
+
+    55% {
+        transform: translateY(-320%);
+    }
+
+    60% {
+        transform: translateY(-410%);
+    }
+
+    70% {
+        transform: translateY(-420%);
+    }
+
+    75% {
+        transform: translateY(-510%);
+    }
+
+    85% {
+        transform: translateY(-520%);
+    }
+
+    90% {
+        transform: translateY(-610%);
+    }
+
+    100% {
+        transform: translateY(-620%);
+    }
+}
