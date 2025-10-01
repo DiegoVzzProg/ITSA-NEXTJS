@@ -2,6 +2,42 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import Header from "@/component/UI/Header";
+import localFont from "next/font/local";
+
+// 1. Configuración para la familia de fuentes "Silka"
+const silkaFont = localFont({
+    src: [
+        {
+            path: "./fonts/silka-regular-webfont.woff2",
+            weight: "400", // 'normal' es 400
+            style: "normal",
+        },
+        {
+            path: "./fonts/silka-regularitalic-webfont.woff2",
+            weight: "400",
+            style: "italic",
+        },
+    ],
+    display: "swap", // Mejora el rendimiento de carga
+    variable: "--font-silka", // Creamos una variable CSS para usarla fácilmente
+});
+
+const itsaFont = localFont({
+    src: [
+        {
+            path: "./fonts/itsa-Regular.30422c880-Regular.woff2",
+            weight: "400", // 'normal'
+            style: "normal",
+        },
+        {
+            path: "./fonts/itsa-Regular.30422c880-Bold.woff2",
+            weight: "700", // 'bold' es 700
+            style: "normal",
+        },
+    ],
+    display: "swap",
+    variable: "--font-itsa", // Creamos otra variable CSS
+});
 
 export const metadata: Metadata = {
     title: "itsa studio",
@@ -15,7 +51,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`antialiased store`}>
+            <body className={`antialiased store ${silkaFont.className} ${itsaFont.variable}`}>
                 <Header></Header>
                 <main className="flex flex-col flex-1">{children}</main>
             </body>

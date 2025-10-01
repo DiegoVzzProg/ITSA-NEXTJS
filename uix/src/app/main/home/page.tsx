@@ -1,5 +1,5 @@
 //import Image from "next/image";
-import "./home.module.css";
+import styles from "./home.module.css";
 
 const texts = [
     {texto: "-", class: "opacity-0"},
@@ -20,7 +20,7 @@ export default async function Home() {
                             return (
                                 <span
                                     key={index}
-                                    className={`${item.class}text-[clamp(2.1em,4vw,6rem)] animate-scroll-down font-itsa-bold translate-y-[-10px]`}
+                                    className={`${item.class}text-[clamp(2.1em,4vw,6rem)] ${styles.animateScrollDown} font-itsa-bold translate-y-[-10px]`}
                                 >
                                     {item.texto}
                                 </span>

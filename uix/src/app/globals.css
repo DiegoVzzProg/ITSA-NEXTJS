@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 * {
+  font-family: var(--font-silka);
   outline: none;
 }
 
@@ -28,4 +29,14 @@ body.system {
 body.store {
   background-color: white;
   color: black;
+}
+
+.font-itsa-bold {
+  font-family: var(--font-itsa);
+  font-weight: 700;
+}
+
+.font-itsa-regular {
+  font-family: var(--font-itsa);
+  font-weight: 400;
 }
